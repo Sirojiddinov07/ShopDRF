@@ -9,9 +9,9 @@ from rest_framework_simplejwt.views import (
 )
 
 urlpatterns = [
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/token/blacklist/', TokenBlacklistView.as_view(), name='token_blacklist'),
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('token/blacklist/', TokenBlacklistView.as_view(), name='token_blacklist'),
 
     path('register/', registerUser, name='register'),
 
@@ -32,23 +32,6 @@ urlpatterns = [
     path('blogs/delete/<int:pk>/', deleteBlogs, name="blogs-delete"),
     path('story/', get_story, name='story'),
     # product urls
-
-    path('products/', ProductView.as_view(), name='products'),
-    path('products/search/', searchProducts, name="product-search"),
-    path('products/create/', createProduct, name="product-create"),
-
-    path('products/<str:pk>/reviews/', createProductReview, name="create-review"),
-    path('products/top/', getTopProducts, name='top-products'),
-    path('products/<int:pk>/', getProduct, name="product"),
-
-    path('products/update/<int:pk>/', updateProduct, name="product-update"),
-    path('products/delete/<int:pk>/', deleteProduct, name="product-delete"),
-    path('products/get_cat/', get_cat, name="get_cat"),
-    path('products/add_cat/', add_cat, name="add_cat"),
-    path('products/deleteCat/<int:pk>/', deleteCat, name="deleteCat"),
- path('products/get_sub/', get_sub, name="get_sub"),
-    path('products/addSubcat/', addSubcat, name="addSubcat"),
-    path('products/deleteSubcat/<int:pk>/', deleteSubcat, name="deleteSubcat"),
 
     # order urls
 
