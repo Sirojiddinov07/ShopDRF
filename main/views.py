@@ -7,7 +7,6 @@ from django.contrib.auth.models import User
 
 from .product_view import StandardResultsSetPagination
 from .serializers import *
-# Create your views here.
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 
